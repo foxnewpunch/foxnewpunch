@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>FNP TECHNOLOGIES — Цифровая экспедиция</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0e0c15;
+            font-family: 'Motiva Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #e2e2e8;
+            line-height: 1.5;
+        }
+
+        .store-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+            background: radial-gradient(circle at 20% 10%, #15121f, #0b0912);
+            width: 100%;
+        }
+
+        .fnp-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #59b7f9;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .fnp-logo-text {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #deceef, #59b7f9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .fnp-tag {
+            background: rgba(89, 183, 249, 0.18);
+            padding: 0.2rem 0.7rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #59b7f9;
+            border: 0.5px solid #59b7f966;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .header-links a {
+            color: #deceef;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+
+        .header-links a:hover {
+            color: #59b7f9;
+            text-shadow: 0 0 4px #59b7f9;
+        }
+
+        .mission-block {
+            background: rgba(222, 206, 239, 0.05);
+            backdrop-filter: blur(2px);
+            border-radius: 32px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 3rem;
+            border: 1px solid #59b7f940;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .mission-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(120deg, #deceef, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .mission-text {
+            font-size: 1.1rem;
+            color: #cfcde5;
+            max-width: 85%;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+            margin: 2.8rem 0 3rem;
+        }
+
+        .project-card {
+            background: #11101c;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #2a253b;
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #59b7f9;
+            box-shadow: 0 20px 30px -10px rgba(89, 183, 249, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+        }
+
+        .project-icon {
+            width: 56px;
+            height: 56px;
+            background: #1e1a2c;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.8rem;
+            box-shadow: 0 0 0 1px #59b7f9;
+            color: #deceef;
+            overflow: hidden;
+        }
+
+        .project-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #deceef;
+        }
+
+        .project-desc {
+            padding: 0.5rem 1.5rem 1rem;
+            color: #b7b4cf;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #22202f;
+        }
+
+        .download-area {
+            padding: 1.2rem 1.5rem 1.5rem;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .btn-download {
+            background: #1f1c2e;
+            border: 1px solid #59b7f9;
+            color: #deceef;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.7rem 1rem;
+            border-radius: 40px;
+            text-align: center;
+            transition: all 0.2s;
+            display: inline-block;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-download:hover {
+            background: #59b7f9;
+            color: #0a0715;
+            border-color: #deceef;
+            box-shadow: 0 0 10px #59b7f9;
+        }
+
+        .btn-download-outline {
+            background: transparent;
+            border: 1px solid #deceef;
+            color: #deceef;
+        }
+
+        .btn-download-outline:hover {
+            background: #deceef22;
+            border-color: #59b7f9;
+            color: #ffffff;
+        }
+
+        .screenshots-section {
+            margin: 3rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.2px;
+            border-left: 5px solid #59b7f9;
+            padding-left: 1rem;
+            color: #deceef;
+        }
+
+        .screenshot-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.3rem;
+            justify-content: flex-start;
+        }
+
+        .screenshot-item {
+            background: #151221;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 220px;
+            transition: 0.2s;
+            border: 1px solid #2f2a40;
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            display: block;
+            background: #1b172a;
+        }
+
+        .screenshot-caption {
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #b7b0da;
+        }
+
+        .news-block {
+            margin: 3rem 0 2rem;
+            background: #0e0c1a;
+            border-radius: 28px;
+            border: 1px solid #2a253f;
+            overflow: hidden;
+        }
+
+        .news-header {
+            background: #11101e;
+            padding: 1rem 1.8rem;
+            border-bottom: 2px solid #59b7f9;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .news-header h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #deceef;
+            margin: 0;
+        }
+
+        .news-list {
+            padding: 1rem 1.8rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .news-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #232035;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            font-size: 0.7rem;
+            color: #59b7f9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .news-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.2rem 0;
+            color: #deceef;
+        }
+
+        .news-excerpt {
+            font-size: 0.85rem;
+            color: #b0accf;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            border-top: 1px solid #2a253f;
+            padding-top: 2rem;
+            color: #8883ac;
+        }
+
+        .badge-fnp {
+            background: #59b7f910;
+            border-radius: 12px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-top: 0.4rem;
+        }
+
+        @media (max-width: 780px) {
+            .store-wrapper {
+                padding: 1.2rem;
+            }
+            .mission-text {
+                max-width: 100%;
+            }
+            .screenshot-item {
+                width: calc(50% - 0.7rem);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="store-wrapper">
+    <!-- ШАПКА БЕЗ ЛОГО-КАРТИНКИ, только текст -->
+    <div class="fnp-header">
+        <div class="logo-area">
+            <div class="fnp-logo-text">FNP TECHNOLOGIES</div>
+            <div class="fnp-tag">ЦИФРОВАЯ АРХЕОЛОГИЯ</div>
+        </div>
+        <div class="header-links">
+            <a href="#">РЕЛИЗЫ</a>
+            <a href="#">БЕЗДНА</a>
+            <a href="#">LEGION X</a>
+            <a href="#">FOXNEWPUNCH</a>
+        </div>
+    </div>
+
+    <!-- миссия -->
+    <div class="mission-block">
+        <div class="mission-title">▸ АРТЕФАКТЫ, КОД, ТИШИНА</div>
+        <div class="mission-text">
+            Мы — не компания. Мы — цифровая археологическая экспедиция на руинах собственной реальности.<br>
+            Создаём альтернативные среды, исследуем глубинные слои сети («Бездну»), автоматизируем порядок через ИИ-санитаров.<br>
+            <span style="color:#59b7f9;">PUNCHX ENGINE</span> — наше ядро. <span style="color:#deceef;">LEGION X</span> — шлюз. <span style="color:#59b7f9;">FOXNEWPUNCH</span> — память.
+        </div>
+    </div>
+
+    <!-- СЕТКА ПРОЕКТОВ с иконками (только изображения) -->
+    <div class="projects-grid">
+        
+        <!-- LEGION X -->
+        <div class="project-card">
+            <div class="card-header">
+                <div class="project-icon">
+                    <img src="images/icon_legionx.png" alt="LEGION X" onerror="this.style.display='none'; this.parentElement.innerText='LX'">
+                </div>
+                <div class="project-name">LEGION X</div>
+            </div>
+            <div class="project-desc">
+                Браузер-шлюз в Бездну. Навигация по цифровым руинам, забытым протоколам и интернету.
+                <div class="badge-fnp">✓ Туннелирование | ✓ VOID-маршруты | ✓ Silent Core</div>
+            </div>
+            <div class="download-area">
+                <a class="btn-download" href="https://drive.google.com/file/d/1vLyFUwXODdPkqwtMlBV325ynFvyHmRQt/view?usp=drive_link" target="_blank"> СКАЧАТЬ LEGION X</a>
+                <span style="font-size:0.7rem; color:#59b7f9aa;">Версия 4.7 — "VOID GATE"</span>
+            </div>
+        </div>
+
+        <!-- FOXNEWPUNCH ODYSSEY -->
+        <div class="project-card">
+            <div class="card-header">
+                <div class="project-icon">
+                    <img src="images/icon_foxnewpunch.png" alt="FOXNEWPUNCH" onerror="this.style.display='none'; this.parentElement.innerText='FP'">
+                </div>
+                <div class="project-name">FOXNEWPUNCH ODYSSEY</div>
+            </div>
+            <div class="project-desc">
+                Нарративная стратегия / цифровая археология. Переживи легендарные события FOXNEWPUNCH.
+                <div class="badge-fnp">✔ V17 грядет | ✔ Ивенты | ✔ 153 тайтла</div>
+            </div>
+            <div class="download-area">
+                <a class="btn-download" href="https://drive.google.com/file/d/1t6RnmKljTsgmGT3t__RCvAWnrFobou4e/view?usp=drive_link" target="_blank">🎮 СКАЧАТЬ FOXNEWPUNCH ODYSSEY</a>
+            </div>
+        </div>
+
+        <!-- SILENT RUNNER -->
+        <div class="project-card">
+            <div class="card-header">
+                <div class="project-icon">
+                    <img src="images/icon_silentrunner.png" alt="SILENT RUNNER" onerror="this.style.display='none'; this.parentElement.innerText='SR'">
+                </div>
+                <div class="project-name">SILENT RUNNER</div>
+            </div>
+            <div class="project-desc">
+                Парсер, который не спит. Фоновый сбор данных, логирование цифровых аномалий.
+                <div class="badge-fnp"> Автоматический дамп | Интеграция с ADVICE X</div>
+            </div>
+            <div class="download-area">
+                <a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1lIwRI9ERBQ7exsZJguA0s66oL2_BUm1n/view?usp=sharing" target="_blank"> СКАЧАТЬ SILENT RUNNER </a>
+            </div>
+        </div>
+
+        <!-- GOODBOY TETZO -->
+        <div class="project-card">
+            <div class="card-header">
+                <div class="project-icon">
+                    <img src="images/icon_goodboy.png" alt="GOODBOY TETZO" onerror="this.style.display='none'; this.parentElement.innerText='GT'">
+                </div>
+                <div class="project-name">GOODBOY TETZO</div>
+            </div>
+            <div class="project-desc">
+                Спасет от запретов на инет в роутере.
+                <div class="badge-fnp"> Изменит MAC | спасет</div>
+            </div>
+            <div class="download-area">
+                <a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1GDl_sGjpb1medFdhuFpq07RPzo4Ht0LQ/view?usp=sharing" target="_blank">СКАЧАТЬ GOODBOY TETZO (Beta)</a>
+            </div>
+        </div>
+
+        <!-- FNP VANILLA -->
+        <div class="project-card">
+            <div class="card-header">
+                <div class="project-icon">
+                    <img src="images/icon_vanilla.png" alt="FNP VANILLA" onerror="this.style.display='none'; this.parentElement.innerText='FV'">
+                </div>
+                <div class="project-name">FNP VANILLA</div>
+            </div>
+            <div class="project-desc">
+                Стабильный слой для работы с артефактами.
+                <div class="badge-fnp">🏛️ База | ⚡ Лёгкий вес</div>
+            </div>
+            <div class="download-area">
+                <a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1pltY1RvI6QBVKCmEIDMwjPuFU9Lh0mTX/view?usp=drive_link" target="_blank">📦 СКАЧАТЬ FNP VANILLA CORE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ГАЛЕРЕЯ ГЕЙМПЛЕЯ (только фотки) -->
+    <div class="screenshots-section">
+        <div class="section-title">ГЕЙМПЛЕЙ FOXNEWPUNCH ODYSSEY — КАДРЫ ИЗ БЕЗДНЫ</div>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="images/screenshot_battle.jpg" alt="Битва за воронки" onerror="this.src='https://placehold.co/400x200/1f1c2e/deceef?text=Битва+за+воронки'">
+                <div class="screenshot-caption">Битвы</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="images/screenshot_map.jpg" alt="Карта Азербабаджана" onerror="this.src='https://placehold.co/400x200/19162a/59b7f9?text=Карта+Азербабаджан'">
+                <div class="screenshot-caption">Альтернативная история</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="images/screenshot_temple.jpg" alt="Храм Плюшек" onerror="this.src='https://placehold.co/400x200/201b33/deceef?text=Храм+плюшек'">
+                <div class="screenshot-caption">Уникальные здания</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="images/screenshot_chickens.jpg" alt="Курицы в броне" onerror="this.src='https://placehold.co/400x200/18142b/59b7f9?text=Курицы+в+броне'">
+                <div class="screenshot-caption">Новые юниты</div>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; font-size:0.8rem; background:#0f0d18; padding: 0.5rem 1rem; border-radius: 28px; display: inline-block;">
+            Игровые моменты из V16 / превью V17
+        </div>
+    </div>
+
+    <!-- НОВОСТИ (без картинок) -->
+    <div class="news-block">
+        <div class="news-header">
+            <span style="font-size: 1.8rem;">FNP</span>
+            <h2>НОВОСТИ FNP / АРХИВНЫЙ СВОД</h2>
+        </div>
+        <div class="news-list">
+            <div class="news-item">
+                <div class="news-date">03/2026 — ПРОТОКОЛ V17</div>
+                <div class="news-title">Финальное тестирование FOXNEWPUNCH ODYSSEY V17</div>
+                <div class="news-excerpt">Исправлен критический баг «потеря памяти». Добавлены ивенты.</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">02/2026 — ИНФРАСТРУКТУРА</div>
+                <div class="news-title">FNPpass: система верификации запущена</div>
+                <div class="news-excerpt">Удостоверение «Свой» теперь работает через хеш-протокол.</div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">01/2026 — ЭКСПЕДИЦИЯ</div>
+                <div class="news-title">Стратегград — цифровая столица FNP</div>
+                <div class="news-excerpt">Стены укреплены, курицы несут дозор. Река Стратега внесена в реестр.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- призыв -->
+    <div style="background: linear-gradient(95deg, #0e0a1a, #121020); border-radius: 28px; padding: 1.2rem 1.8rem; margin: 2rem 0; border-left: 4px solid #59b7f9;">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div><span style="color:#deceef; font-weight: 600;"> FNP ПРОТОКОЛ 0x7E</span><br> 
+            <span style="font-size:0.85rem;">Архивы открыты. Если ты помнишь события FOXNEWPUNCH — поделись.</span>
+            </div>
+            <a href="https://t.me/FOXNEWPUNCH" style="background: #59b7f9; color:#0b0715; padding: 0.5rem 1.3rem; border-radius: 60px; text-decoration: none; font-weight: 600; font-size:0.8rem;"> @FOXNEWPUNCH</a>
+        </div>
+    </div>
+
+    <div class="footer-note">
+         ПИНГУЙ НАС СКОЛЬКО ХОЧЕШЬ. TIMEOUT — НАШ ЕДИНСТВЕННЫЙ СТАТУС. <br>
+        FNP TECHNOLOGIES LTD — ЦИФРОВАЯ ЭКСПЕДИЦИЯ, 2026
+    </div>
+</div>
+</body>
+</html>
