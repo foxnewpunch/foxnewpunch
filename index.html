@@ -330,6 +330,20 @@
             color: #ffffff;
         }
 
+        /* статус "в разработке" */
+        .badge-dev {
+            background: #2a253f;
+            border: 1px solid #deceef66;
+            color: #deceef;
+            border-radius: 40px;
+            padding: 0.7rem 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            cursor: default;
+        }
+
         .screenshots-section {
             margin: 3rem 0 2rem;
         }
@@ -703,7 +717,7 @@
         </div>
     </div>
 
-    <!-- ПРОЕКТЫ (без эмодзи) -->
+    <!-- ПРОЕКТЫ (включая PUNCHCRAFT и FOXNEWPUNCH 2) -->
     <div class="projects-grid">
         <div class="project-card">
             <div class="card-header">
@@ -785,6 +799,40 @@
                 <a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1pltY1RvI6QBVKCmEIDMwjPuFU9Lh0mTX/view?usp=drive_link" target="_blank"> СКАЧАТЬ FNP VANILLA CORE</a>
             </div>
         </div>
+
+        <div class="project-card">
+            <div class="card-header">
+                <div class="project-icon">
+                    <img src="images/icon_punchcraft.png" alt="PUNCHCRAFT" onerror="this.style.display='none'; this.parentElement.innerText='⛏️'">
+                </div>
+                <div class="project-name">PUNCHCRAFT</div>
+            </div>
+            <div class="project-desc">
+                Атмосферный текстур-пак, погружающий в эстетику «Бездны» и цифровой археологии. Пиксельные артефакты, мрачные тона, аномальные блоки.
+                <div class="badge-fnp">16x16 | VOID-текстуры | Совместимость с 1.20+</div>
+            </div>
+            <div class="download-area">
+                <a class="btn-download" href="https://drive.google.com/file/d/1SamplePunchCraftLink/view?usp=drive_link" target="_blank"> СКАЧАТЬ PUNCHCRAFT</a>
+                <span style="font-size:0.7rem; color:#59b7f9aa;">Релиз: VOID_EDITION 1.2</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="card-header">
+                <div class="project-icon">
+                    <img src="images/icon_foxnewpunch2.png" alt="FOXNEWPUNCH 2" onerror="this.style.display='none'; this.parentElement.innerText='F2'">
+                </div>
+                <div class="project-name">FOXNEWPUNCH 2</div>
+            </div>
+            <div class="project-desc">
+                Продолжение цифровой саги. Новые руины, фракции и протоколы. Глубже, темнее, необратимее.
+                <div class="badge-fnp"> Экспедиционный режим </div>
+            </div>
+            <div class="download-area">
+                <div class="badge-dev">В РАЗРАБОТКЕ</div>
+                <span style="font-size:0.7rem; color:#deceefaa;">Релиз: осень 2027 — протокол "НОВЫЙ СВЕТ"</span>
+            </div>
+        </div>
     </div>
 
     <!-- ГАЛЕРЕЯ -->
@@ -805,6 +853,7 @@
             <div class="news-item"><div class="news-date">03/2026 — ПРОТОКОЛ V17</div><div class="news-title">Финальное тестирование FOXNEWPUNCH ODYSSEY V17</div><div class="news-excerpt">Исправлен критический баг «потеря памяти».</div></div>
             <div class="news-item"><div class="news-date">02/2026 — ИНФРАСТРУКТУРА</div><div class="news-title">FNPpass: система верификации запущена</div><div class="news-excerpt">Удостоверение «Свой» теперь работает через хеш-протокол.</div></div>
             <div class="news-item"><div class="news-date">01/2026 — ЭКСПЕДИЦИЯ</div><div class="news-title">Стратегград — цифровая столица FNP</div><div class="news-excerpt">Стены укреплены, курицы несут дозор.</div></div>
+            <div class="news-item"><div class="news-date">02/2026 — ТЕКСТУРНЫЙ ПАК</div><div class="news-title">PUNCHCRAFT вышел в VOID-сборке</div><div class="news-excerpt">Первый официальный текстур-пак от FNP TECHNOLOGIES.</div></div>
         </div>
     </div>
 
@@ -894,7 +943,6 @@
         isSupportActive = true;
         clearTimeouts();
         
-        // AI: "переключаю вас на оператора"
         addTypingIndicator(() => {
             addMessage("переключаю вас на оператора", false, 'images/avatar_advicex.png', 'ai');
             
@@ -917,7 +965,6 @@
         const msg = chatInput.value.trim();
         if (!msg) return;
         
-        // Добавляем сообщение пользователя
         const userMsgDiv = document.createElement('div');
         userMsgDiv.className = 'message';
         userMsgDiv.innerHTML = `
@@ -928,11 +975,9 @@
         chatMessages.scrollTop = chatMessages.scrollHeight;
         chatInput.value = '';
         
-        // Запускаем сценарий поддержки
         startSupportFlow();
     }
 
-    // Открыть/закрыть чат
     chatCircle.addEventListener('click', () => {
         chatWindow.classList.toggle('open');
     });
@@ -948,7 +993,6 @@
         if (e.key === 'Enter') handleUserMessage();
     });
     
-    // Закрыть при клике вне (опционально)
     document.addEventListener('click', (e) => {
         if (!chatWindow.contains(e.target) && !chatCircle.contains(e.target) && chatWindow.classList.contains('open')) {
             chatWindow.classList.remove('open');
