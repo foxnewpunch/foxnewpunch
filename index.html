@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-
     <title>FNP TECHNOLOGIES — Цифровая археология</title>
 
-
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
     <meta property="og:title" content="FNP TECHNOLOGIES — Цифровая археология &amp; Распад">
-    <meta property="og:description" content="Мы — цифровая археологическая экспедиция. Создаём альтернативные среды, исследуем Бездну. PUNCHX ENGINE, LEGION X, FOXNEWPUNCH ODYSSEY.">
+    <meta property="og:description" content="Мы — цифровая археологическая экспедиция. Создаём альтернативные среды, исследуем Бездну.">
     <meta property="og:image" content="https://foxnewpunch.github.io/foxnewpunch/preview.jpg">
     <meta property="og:url" content="https://foxnewpunch.github.io/foxnewpunch/">
     <meta property="og:type" content="website">
@@ -24,12 +21,15 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FNP TECHNOLOGIES — Цифровая археология">
-    <meta name="twitter:description" content="Мы — цифровая археологическая экспедиция. Исследуем Бездну. PUNCHX ENGINE, LEGION X, FOXNEWPUNCH ODYSSEY.">
+    <meta name="twitter:description" content="Мы — цифровая археологическая экспедиция. Исследуем Бездну.">
     <meta name="twitter:image" content="https://foxnewpunch.github.io/foxnewpunch/preview.jpg">
 
     <style>
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             background-color: #0e0c15;
             font-family: 'Motiva Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -88,7 +88,10 @@
             font-size: 0.9rem;
             transition: 0.2s;
         }
-        .header-links a:hover { color: #59b7f9; text-shadow: 0 0 4px #59b7f9; }
+        .header-links a:hover {
+            color: #59b7f9;
+            text-shadow: 0 0 4px #59b7f9;
+        }
         .mission-block {
             background: rgba(222, 206, 239, 0.05);
             backdrop-filter: blur(2px);
@@ -96,7 +99,7 @@
             padding: 2rem 2.2rem;
             margin-bottom: 3rem;
             border: 1px solid #59b7f940;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
         }
         .mission-title {
             font-size: 1.8rem;
@@ -133,13 +136,29 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            cursor: pointer;
         }
-        .custom-btn img { width: 20px; height: 20px; object-fit: contain; }
-        .custom-btn:hover { background: #59b7f9; color: #0a0715; border-color: #deceef; box-shadow: 0 0 12px #59b7f9; }
-        .custom-btn-outline { background: transparent; border: 1px solid #deceef; }
-        .custom-btn-outline:hover { background: #deceef22; border-color: #59b7f9; color: #ffffff; }
-        
-        /* вики-профили организаций (только FNP и FADE) */
+        .custom-btn img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+        .custom-btn:hover {
+            background: #59b7f9;
+            color: #0a0715;
+            border-color: #deceef;
+            box-shadow: 0 0 12px #59b7f9;
+        }
+        .custom-btn-outline {
+            background: transparent;
+            border: 1px solid #deceef;
+        }
+        .custom-btn-outline:hover {
+            background: #deceef22;
+            border-color: #59b7f9;
+            color: #ffffff;
+        }
+
         .wiki-orgs {
             display: flex;
             flex-wrap: wrap;
@@ -155,7 +174,11 @@
             overflow: hidden;
             transition: 0.2s;
         }
-        .wiki-card:hover { transform: translateY(-6px); border-color: #59b7f9; box-shadow: 0 0 18px #59b7f930; }
+        .wiki-card:hover {
+            transform: translateY(-6px);
+            border-color: #59b7f9;
+            box-shadow: 0 0 18px #59b7f930;
+        }
         .wiki-header {
             background: #11101e;
             padding: 1rem;
@@ -172,9 +195,19 @@
             display: block;
             background: #1e1a2c;
         }
-        .wiki-name { font-size: 1.5rem; font-weight: 800; color: #deceef; }
-        .wiki-content { padding: 1.2rem; font-size: 0.9rem; color: #bfbce2; }
-        .wiki-content p { margin: 0.6rem 0; }
+        .wiki-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #deceef;
+        }
+        .wiki-content {
+            padding: 1.2rem;
+            font-size: 0.9rem;
+            color: #bfbce2;
+        }
+        .wiki-content p {
+            margin: 0.6rem 0;
+        }
         .wiki-badge {
             background: #59b7f910;
             border-radius: 20px;
@@ -183,7 +216,6 @@
             display: inline-block;
             color: #59b7f9;
         }
-        
 
         .partners-block {
             background: #0e0c1a;
@@ -200,7 +232,12 @@
             align-items: center;
             gap: 1rem;
         }
-        .partners-header h2 { font-size: 1.6rem; font-weight: 600; color: #deceef; margin: 0; }
+        .partners-header h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #deceef;
+            margin: 0;
+        }
         .partners-list {
             padding: 1.5rem 1.8rem;
             display: flex;
@@ -224,10 +261,24 @@
             align-items: center;
             gap: 8px;
         }
-        .partner-item a img { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; }
-        .partner-item:hover { border-color: #59b7f9; background: #1d1930; transform: translateY(-2px); }
-        .partner-badge { font-size: 0.7rem; background: #59b7f920; padding: 2px 8px; border-radius: 40px; color: #59b7f9; }
-        
+        .partner-item a img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .partner-item:hover {
+            border-color: #59b7f9;
+            background: #1d1930;
+            transform: translateY(-2px);
+        }
+        .partner-badge {
+            font-size: 0.7rem;
+            background: #59b7f920;
+            padding: 2px 8px;
+            border-radius: 40px;
+            color: #59b7f9;
+        }
 
         .projects-grid {
             display: grid;
@@ -241,95 +292,401 @@
             overflow: hidden;
             transition: transform 0.2s, box-shadow 0.2s;
             border: 1px solid #2a253b;
-            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.6);
             display: flex;
             flex-direction: column;
             cursor: pointer;
         }
-        .project-card:hover { transform: translateY(-5px); border-color: #59b7f9; box-shadow: 0 20px 30px -10px rgba(89, 183, 249, 0.2); }
-        .card-header { display: flex; align-items: center; gap: 1rem; padding: 1.5rem 1.5rem 0.5rem 1.5rem; }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #59b7f9;
+            box-shadow: 0 20px 30px -10px rgba(89, 183, 249, 0.2);
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+        }
         .project-icon {
-            width: 56px; height: 56px; background: #1e1a2c; border-radius: 18px;
-            display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.8rem;
-            box-shadow: 0 0 0 1px #59b7f9; color: #deceef; overflow: hidden;
+            width: 56px;
+            height: 56px;
+            background: #1e1a2c;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.8rem;
+            box-shadow: 0 0 0 1px #59b7f9;
+            color: #deceef;
+            overflow: hidden;
         }
-        .project-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .project-name { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.3px; color: #deceef; }
-        .project-desc { padding: 0.5rem 1.5rem 1rem; color: #b7b4cf; font-size: 0.9rem; border-bottom: 1px solid #22202f; }
-        .download-area { padding: 1.2rem 1.5rem 1.5rem; margin-top: auto; display: flex; flex-direction: column; gap: 0.8rem; }
-        .btn-download {
-            background: #1f1c2e; border: 1px solid #59b7f9; color: #deceef; text-decoration: none;
-            font-weight: 600; padding: 0.7rem 1rem; border-radius: 40px; text-align: center; transition: all 0.2s;
+        .project-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .project-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #deceef;
+        }
+        .project-desc {
+            padding: 0.5rem 1.5rem 1rem;
+            color: #b7b4cf;
             font-size: 0.9rem;
+            border-bottom: 1px solid #22202f;
         }
-        .btn-download:hover { background: #59b7f9; color: #0a0715; border-color: #deceef; box-shadow: 0 0 10px #59b7f9; }
-        .btn-download-outline { background: transparent; border: 1px solid #deceef; }
-        .btn-download-outline:hover { background: #deceef22; border-color: #59b7f9; color: #ffffff; }
-        .badge-dev { background: #2a253f; border: 1px solid #deceef66; color: #deceef; border-radius: 40px; padding: 0.7rem 1rem; text-align: center; font-size: 0.85rem; font-weight: 500; cursor: default; }
-        .badge-fnp { background: #59b7f910; border-radius: 12px; padding: 0.2rem 0.8rem; font-size: 0.7rem; display: inline-block; margin-top: 0.4rem; }
-        
-        .screenshots-section { margin: 3rem 0 2rem; }
-        .section-title { font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; border-left: 5px solid #59b7f9; padding-left: 1rem; color: #deceef; }
-        .screenshot-grid { display: flex; flex-wrap: wrap; gap: 1.3rem; justify-content: flex-start; }
-        .screenshot-item { background: #151221; border-radius: 20px; overflow: hidden; width: 220px; transition: 0.2s; border: 1px solid #2f2a40; }
-        .screenshot-item img { width: 100%; height: 130px; object-fit: cover; display: block; background: #1b172a; }
-        .screenshot-caption { padding: 0.5rem; font-size: 0.75rem; text-align: center; color: #b7b0da; }
-        
-        .news-block { margin: 3rem 0 2rem; background: #0e0c1a; border-radius: 28px; border: 1px solid #2a253f; overflow: hidden; }
-        .news-header { background: #11101e; padding: 1rem 1.8rem; border-bottom: 2px solid #59b7f9; display: flex; align-items: center; gap: 1rem; }
-        .news-header h2 { font-size: 1.6rem; font-weight: 600; color: #deceef; margin: 0; }
-        .news-list { padding: 1rem 1.8rem 1.8rem; display: flex; flex-direction: column; gap: 1rem; }
-        .news-item { padding: 0.8rem 0; border-bottom: 1px solid #232035; }
-        .news-item:last-child { border-bottom: none; }
-        .news-date { font-size: 0.7rem; color: #59b7f9; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-        .news-title { font-size: 1rem; font-weight: 600; margin: 0.2rem 0; color: #deceef; }
-        .news-excerpt { font-size: 0.85rem; color: #b0accf; }
-        .footer-note { margin-top: 3rem; text-align: center; font-size: 0.8rem; border-top: 1px solid #2a253f; padding-top: 2rem; color: #8883ac; }
-        
+        .download-area {
+            padding: 1.2rem 1.5rem 1.5rem;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .btn-download {
+            background: #1f1c2e;
+            border: 1px solid #59b7f9;
+            color: #deceef;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.7rem 1rem;
+            border-radius: 40px;
+            text-align: center;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .btn-download:hover {
+            background: #59b7f9;
+            color: #0a0715;
+            border-color: #deceef;
+            box-shadow: 0 0 10px #59b7f9;
+        }
+        .btn-download-outline {
+            background: transparent;
+            border: 1px solid #deceef;
+        }
+        .btn-download-outline:hover {
+            background: #deceef22;
+            border-color: #59b7f9;
+            color: #ffffff;
+        }
+        .badge-dev {
+            background: #2a253f;
+            border: 1px solid #deceef66;
+            color: #deceef;
+            border-radius: 40px;
+            padding: 0.7rem 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: default;
+        }
+        .badge-fnp {
+            background: #59b7f910;
+            border-radius: 12px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-top: 0.4rem;
+        }
 
-        .timers-container { display: flex; flex-wrap: wrap; gap: 2rem; margin: 2rem 0; justify-content: center; }
-        .timer-card { background: #0e0c1a; border: 1px solid #59b7f9; border-radius: 24px; padding: 1rem; text-align: center; flex: 1; max-width: 400px; }
-        .timer-digits { font-size: 1.8rem; font-weight: 800; font-family: monospace; color: #deceef; }
-        
+        .news-block {
+            margin: 3rem 0 2rem;
+            background: #0e0c1a;
+            border-radius: 28px;
+            border: 1px solid #2a253f;
+            overflow: hidden;
+        }
+        .news-header {
+            background: #11101e;
+            padding: 1rem 1.8rem;
+            border-bottom: 2px solid #59b7f9;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .news-header h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #deceef;
+            margin: 0;
+        }
+        .news-list {
+            padding: 1rem 1.8rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .news-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #232035;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-date {
+            font-size: 0.7rem;
+            color: #59b7f9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .news-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.2rem 0;
+            color: #deceef;
+        }
+        .news-excerpt {
+            font-size: 0.85rem;
+            color: #b0accf;
+        }
+        .footer-note {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            border-top: 1px solid #2a253f;
+            padding-top: 2rem;
+            color: #8883ac;
+        }
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .footer-logo-item {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            border: 1px solid #2f2a48;
+            border-radius: 6px;
+            transition: 0.2s;
+            overflow: hidden;
+            background: #11101c;
+        }
+        .footer-logo-item:hover {
+            border-color: #59b7f9;
+            box-shadow: 0 0 16px rgba(89, 183, 249, 0.2);
+        }
+        .footer-logo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .timers-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+        .timer-card {
+            background: #0e0c1a;
+            border: 1px solid #59b7f9;
+            border-radius: 24px;
+            padding: 1rem;
+            text-align: center;
+            flex: 1;
+            max-width: 400px;
+        }
+        .timer-digits {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: monospace;
+            color: #deceef;
+        }
 
         .chat-circle {
-            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
-            background: linear-gradient(135deg, #59b7f9, #deceef); border-radius: 50%; cursor: pointer;
-            box-shadow: 0 4px 15px rgba(89, 183, 249, 0.4); display: flex; align-items: center; justify-content: center; z-index: 1000;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #59b7f9, #deceef);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(89, 183, 249, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
         }
-        .chat-circle img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+        .chat-circle img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
         .chat-window {
-            position: fixed; bottom: 100px; right: 30px; width: 350px; height: 500px; background: #11101c;
-            border-radius: 20px; border: 1px solid #59b7f9; display: flex; flex-direction: column; z-index: 1001;
-            backdrop-filter: blur(10px); transform: scale(0); opacity: 0; transition: transform 0.2s, opacity 0.2s; transform-origin: bottom right;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: #11101c;
+            border-radius: 20px;
+            border: 1px solid #59b7f9;
+            display: flex;
+            flex-direction: column;
+            z-index: 1001;
+            backdrop-filter: blur(10px);
+            transform: scale(0);
+            opacity: 0;
+            transition: transform 0.2s, opacity 0.2s;
+            transform-origin: bottom right;
         }
-        .chat-window.open { transform: scale(1); opacity: 1; }
-        .chat-header { background: #1a1728; padding: 12px 16px; border-radius: 20px 20px 0 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #59b7f9; }
-        .chat-header-title { display: flex; align-items: center; gap: 10px; }
-        .chat-header-title img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
-        .chat-header-title span { font-weight: 600; color: #deceef; }
-        .chat-close { background: none; border: none; color: #59b7f9; font-size: 24px; cursor: pointer; font-weight: bold; }
-        .chat-messages { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
-        .message { display: flex; gap: 8px; align-items: flex-start; animation: fadeIn 0.3s; }
-        .message-avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
-        .message-bubble { background: #1e1a2c; padding: 8px 12px; border-radius: 18px; max-width: 80%; font-size: 0.85rem; color: #e2e2e8; }
-        .message.system .message-bubble { background: #59b7f920; border-left: 2px solid #59b7f9; }
-        .typing-indicator { display: flex; gap: 4px; padding: 8px 12px; background: #1e1a2c; border-radius: 18px; width: fit-content; }
-        .typing-indicator span { width: 6px; height: 6px; background: #59b7f9; border-radius: 50%; animation: typing 1.4s infinite; }
-        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
-        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
-        @keyframes typing { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-6px); opacity: 1; } }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .chat-input-area { padding: 12px; border-top: 1px solid #2a253f; display: flex; gap: 8px; }
-        .chat-input-area input { flex: 1; background: #1e1a2c; border: 1px solid #3d3460; border-radius: 20px; padding: 8px 12px; color: #deceef; outline: none; }
-        .chat-input-area button { background: #59b7f9; border: none; border-radius: 20px; padding: 8px 16px; color: #0a0715; font-weight: 600; cursor: pointer; }
+        .chat-window.open {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .chat-header {
+            background: #1a1728;
+            padding: 12px 16px;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #59b7f9;
+        }
+        .chat-header-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .chat-header-title img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .chat-header-title span {
+            font-weight: 600;
+            color: #deceef;
+        }
+        .chat-close {
+            background: none;
+            border: none;
+            color: #59b7f9;
+            font-size: 24px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .message {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            animation: fadeIn 0.3s;
+        }
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .message-bubble {
+            background: #1e1a2c;
+            padding: 8px 12px;
+            border-radius: 18px;
+            max-width: 80%;
+            font-size: 0.85rem;
+            color: #e2e2e8;
+        }
+        .message.system .message-bubble {
+            background: #59b7f920;
+            border-left: 2px solid #59b7f9;
+        }
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 8px 12px;
+            background: #1e1a2c;
+            border-radius: 18px;
+            width: fit-content;
+        }
+        .typing-indicator span {
+            width: 6px;
+            height: 6px;
+            background: #59b7f9;
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes typing {
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+                opacity: 0.4;
+            }
+            30% {
+                transform: translateY(-6px);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .chat-input-area {
+            padding: 12px;
+            border-top: 1px solid #2a253f;
+            display: flex;
+            gap: 8px;
+        }
+        .chat-input-area input {
+            flex: 1;
+            background: #1e1a2c;
+            border: 1px solid #3d3460;
+            border-radius: 20px;
+            padding: 8px 12px;
+            color: #deceef;
+            outline: none;
+        }
+        .chat-input-area button {
+            background: #59b7f9;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            color: #0a0715;
+            font-weight: 600;
+            cursor: pointer;
+        }
 
-        /* === НОВЫЙ СТИЛЬ ДЛЯ STEAM-ПОДОБНОГО ОКНА === */
         .detail-overlay {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.75);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
             backdrop-filter: blur(6px);
             z-index: 2000;
             display: none;
@@ -337,7 +694,9 @@
             align-items: center;
             padding: 1.5rem;
         }
-        .detail-overlay.active { display: flex; }
+        .detail-overlay.active {
+            display: flex;
+        }
         .detail-panel {
             background: #1a1c26;
             max-width: 920px;
@@ -346,14 +705,20 @@
             overflow-y: auto;
             border-radius: 20px;
             border: 1px solid #4a5260;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
             padding: 2rem 2.2rem;
             position: relative;
             animation: fadeSlide 0.25s ease;
         }
         @keyframes fadeSlide {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .detail-close {
             position: sticky;
@@ -374,7 +739,10 @@
             margin-bottom: 1rem;
             z-index: 10;
         }
-        .detail-close:hover { background: #5a6370; color: #fff; }
+        .detail-close:hover {
+            background: #5a6370;
+            color: #fff;
+        }
         .detail-header {
             display: flex;
             gap: 2rem;
@@ -390,7 +758,9 @@
             border: 1px solid #4a5260;
             flex-shrink: 0;
         }
-        .detail-title-block { flex: 1; }
+        .detail-title-block {
+            flex: 1;
+        }
         .detail-title {
             font-size: 2.2rem;
             font-weight: 700;
@@ -470,433 +840,850 @@
             background: #8acef7;
             transform: scale(1.02);
         }
-        .detail-download-btn:active { transform: scale(0.97); }
-        .detail-panel::-webkit-scrollbar { width: 6px; }
-        .detail-panel::-webkit-scrollbar-track { background: #1a1e26; }
-        .detail-panel::-webkit-scrollbar-thumb { background: #4a5260; border-radius: 10px; }
+        .detail-download-btn:active {
+            transform: scale(0.97);
+        }
+        .detail-panel::-webkit-scrollbar {
+            width: 6px;
+        }
+        .detail-panel::-webkit-scrollbar-track {
+            background: #1a1e26;
+        }
+        .detail-panel::-webkit-scrollbar-thumb {
+            background: #4a5260;
+            border-radius: 10px;
+        }
+
+        .prime-cs2-block {
+            background: #0e0c1a;
+            border-radius: 28px;
+            border: 1px solid #59b7f9;
+            margin: 2.5rem 0 2rem;
+            padding: 1.8rem 2.2rem;
+            box-shadow: 0 0 20px rgba(89, 183, 249, 0.08);
+            transition: border-color 0.3s;
+        }
+        .prime-cs2-block:hover {
+            border-color: #deceef;
+            box-shadow: 0 0 30px rgba(89, 183, 249, 0.15);
+        }
+        .prime-top {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .prime-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .prime-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: #1a1a2e;
+            border: 1px solid #59b7f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .prime-icon img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 6px rgba(89, 183, 249, 0.3));
+        }
+        .prime-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+        }
+        .prime-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #deceef;
+            letter-spacing: -0.3px;
+        }
+        .prime-title span {
+            background: linear-gradient(135deg, #59b7f9, #deceef);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .prime-timer {
+            background: #11101e;
+            padding: 0.6rem 1.8rem;
+            border-radius: 40px;
+            border: 1px solid #3d3460;
+            font-family: monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #deceef;
+            white-space: nowrap;
+            min-width: 160px;
+            text-align: center;
+        }
+        .prime-timer-label {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #59b7f9;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-right: 6px;
+        }
+
+        .prime-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #2a253f;
+            justify-content: space-around;
+        }
+        .prime-stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1rem;
+            color: #b7b4cf;
+        }
+        .prime-stat-item .icon {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+        .prime-stat-item strong {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #59b7f9;
+            margin: 0 0.2rem;
+        }
+        .prime-stat-item .label {
+            color: #8883ac;
+            font-size: 0.85rem;
+        }
+
+        /* ПЛЕЕР */
+        .music-player {
+            background: #11101e;
+            border-radius: 40px;
+            padding: 0.5rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid #2a253f;
+            margin-top: 0.5rem;
+        }
+        .music-player button {
+            background: none;
+            border: none;
+            color: #59b7f9;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.2rem 0.4rem;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+        }
+        .music-player button:hover {
+            color: #deceef;
+            transform: scale(1.1);
+        }
+        .music-player input[type="range"] {
+            width: 100px;
+            accent-color: #59b7f9;
+            background: #2a253f;
+            height: 4px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .music-player .volume-label {
+            color: #8883ac;
+            font-size: 0.7rem;
+            margin-right: -0.3rem;
+        }
+        .music-player .track-name {
+            color: #8883ac;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 600px) {
+            .prime-cs2-block {
+                padding: 1.5rem;
+            }
+            .prime-top {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            .prime-left {
+                justify-content: center;
+            }
+            .prime-timer {
+                font-size: 1.1rem;
+                min-width: unset;
+                padding: 0.6rem 1rem;
+            }
+            .prime-stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            .music-player {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0.5rem 1rem;
+            }
+            .music-player input[type="range"] {
+                width: 80px;
+            }
+        }
 
         @media (max-width: 780px) {
-            .store-wrapper { padding: 1.2rem; }
-            .mission-text { max-width: 100%; }
-            .screenshot-item { width: calc(50% - 0.7rem); }
-            .chat-window { width: 300px; right: 20px; bottom: 90px; }
-            .chat-circle { bottom: 20px; right: 20px; }
-            .detail-panel { padding: 1.2rem; }
-            .detail-header { flex-direction: column; align-items: center; text-align: center; }
-            .detail-meta-grid { grid-template-columns: 1fr; }
-            .detail-screenshots img { width: 100%; }
+            .store-wrapper {
+                padding: 1.2rem;
+            }
+            .mission-text {
+                max-width: 100%;
+            }
+            .chat-window {
+                width: 300px;
+                right: 20px;
+                bottom: 90px;
+            }
+            .chat-circle {
+                bottom: 20px;
+                right: 20px;
+            }
+            .detail-panel {
+                padding: 1.2rem;
+            }
+            .detail-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .detail-meta-grid {
+                grid-template-columns: 1fr;
+            }
+            .detail-screenshots img {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-<div class="store-wrapper">
-
-    <div class="fnp-header">
-        <div class="logo-area">
-            <div class="fnp-logo-text">FNP TECHNOLOGIES</div>
-            <div class="fnp-tag">ЦИФРОВАЯ АРХЕОЛОГИЯ</div>
-        </div>
-        <div class="header-links">
-            <a href="#">РЕЛИЗЫ</a>
-            <a href="#">БЕЗДНА</a>
-            <a href="#">LEGION X</a>
-            <a href="#">FOXNEWPUNCH</a>
-        </div>
-    </div>
-
-    <div class="mission-block">
-        <div class="mission-title">▸ АРТЕФАКТЫ, КОД, ТИШИНА</div>
-        <div class="mission-text">
-            Мы — не компания. Мы — цифровая археологическая экспедиция на руинах собственной реальности.<br>
-            Создаём альтернативные среды, исследуем глубинные слои сети («Бездну»), автоматизируем порядок через ИИ-санитаров.<br>
-            <span style="color:#59b7f9;">PUNCHX ENGINE</span> — наше ядро. <span style="color:#deceef;">LEGION X</span> — шлюз. <span style="color:#59b7f9;">FOXNEWPUNCH</span> — память.
-        </div>
-    </div>
-
-
-    <div class="wiki-orgs">
-        <div class="wiki-card">
-            <div class="wiki-header">
-                <img class="wiki-flag" src="images/flag_fnp.png" alt="FNP flag" onerror="this.src='https://placehold.co/80x80/1f1c2e/59b7f9?text=FNP'">
-                <div class="wiki-name">FNP TECHNOLOGIES</div>
-                <div class="wiki-badge">ЦИФРОВАЯ ЭКСПЕДИЦИЯ</div>
+    <div class="store-wrapper">
+        <!-- ШАПКА -->
+        <div class="fnp-header">
+            <div class="logo-area">
+                <div class="fnp-logo-text">FNP TECHNOLOGIES</div>
+                <div class="fnp-tag">ЦИФРОВАЯ АРХЕОЛОГИЯ</div>
             </div>
-            <div class="wiki-content">
-                <p><strong>Основание:</strong> 2019 / Протокол 0x7E<br><strong>Сфера:</strong> цифровая археология, VOID-разработки, AI-санитары.<br><strong>Ключевые проекты:</strong> LEGION X, FOXNEWPUNCH ODYSSEY, PUNCHCRAFT.<br><strong>Флаг:</strong> градиент бездны и сияние артефактов.</p>
-                <p><em>«Мы не компания — мы экспедиция на руинах реальности»</em></p>
+            <div class="header-links">
+                <a href="#">РЕЛИЗЫ</a>
+                <a href="#">БЕЗДНА</a>
+                <a href="#">LEGION X</a>
+                <a href="#">FOXNEWPUNCH</a>
             </div>
         </div>
-        <div class="wiki-card">
-            <div class="wiki-header">
-                <img class="wiki-flag" src="images/flag_fade.png" alt="FADE flag" onerror="this.src='https://placehold.co/80x80/3d3460/59b7f9?text=FADE'">
-                <div class="wiki-name">АЛЬЯНС FADE</div>
-                <div class="wiki-badge">FNP + ПАРТНЁРЫ</div>
+
+        <!-- миссия -->
+        <div class="mission-block">
+            <div class="mission-title">▸ АРТЕФАКТЫ, КОД, ТИШИНА</div>
+            <div class="mission-text">
+                Мы — не компания. Мы — цифровая археологическая экспедиция на руинах собственной реальности.<br>
+                Создаём альтернативные среды, исследуем глубинные слои сети («Бездну»), автоматизируем порядок через ИИ-санитаров.<br>
+                <span style="color:#59b7f9;">PUNCHX ENGINE</span> — наше ядро. <span style="color:#deceef;">LEGION X</span> — шлюз. <span style="color:#59b7f9;">FOXNEWPUNCH</span> — память.
             </div>
-            <div class="wiki-content">
-                <p><strong>Протокол единства:</strong> 2025 — неразрывный пакт между цифровой археологией и союзниками.<br><strong>Символ:</strong> пересекающиеся спирали артефакта и аномалии.<br>Альянс координирует выпуск кросс-продуктов и обмен протоколами.</p>
-                <p>«FADE — грань между памятью и забвением»</p>
+            <!-- ПЛЕЕР -->
+            <div class="music-player" style="margin-top:1.2rem;">
+                <span class="track-name">🎵 takida_fifthver</span>
+                <button id="playBtn" title="Воспроизвести/Пауза">▶</button>
+                <span class="volume-label">🔊</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.4">
             </div>
         </div>
-    </div>
 
-
-    <div class="partners-block">
-        <div class="partners-header"><span style="font-size: 1.8rem;">#</span><h2>ПАРТНЁРЫ ПРОТОКОЛА</h2></div>
-        <div class="partners-list">
-            <div class="partner-item"><a href="https://t.me/wh01sme_music" target="_blank"><img src="images/avatar_wh01sme.png" alt="wh01sme" onerror="this.style.display='none'"><span>wh01sme</span><span class="partner-badge">official</span></a></div>
-        </div>
-    </div>
-
-
-    <div class="link-buttons-section">
-        <a href="https://t.me/FNP_TECHNOLOGIES" class="custom-btn" target="_blank"><img src="images/icon_telegram.png" onerror="this.style.display='none'"> РЕЛИЗЫ FNP</a>
-        <a href="https://fakecrime.bio/FNP" class="custom-btn custom-btn-outline" target="_blank"><img src="images/icon_bio.png" onerror="this.style.display='none'"> БИОГРАФИЯ</a>
-        <a href="https://foxnewpunch.fandom.com/ru/wiki/" class="custom-btn" target="_blank"><img src="images/icon_wiki.png" onerror="this.style.display='none'"> ВИКИ</a>
-        <a href="https://www.youtube.com/@FOXNEWPUNCH" class="custom-btn custom-btn-outline" target="_blank"><img src="images/icon_youtube.png" onerror="this.style.display='none'"> YOUTUBE</a>
-        <a href="https://t.me/FOXNEWPUNCH" class="custom-btn" target="_blank"><img src="images/icon_telegram_channel.png" onerror="this.style.display='none'"> ТЕЛЕГРАМ</a>
-    </div>
-
-
-    <div class="projects-grid" id="projectsGrid">
-        <div class="project-card" data-project="legionx">
-            <div class="card-header"><div class="project-icon"><img src="images/icon_legionx.png" alt="LEGION X" onerror="this.style.display='none'; this.parentElement.innerText='LX'"></div><div class="project-name">LEGION X</div></div>
-            <div class="project-desc">Браузер-шлюз в Бездну. Навигация по цифровым руинам.<div class="badge-fnp">Туннелирование | VOID-маршруты</div></div>
-            <div class="download-area"><a class="btn-download" href="https://drive.google.com/file/d/1vLyFUwXODdPkqwtMlBV325ynFvyHmRQt/view" target="_blank">СКАЧАТЬ LEGION X</a><span style="font-size:0.7rem; color:#59b7f9aa;">Версия 4.7 — "VOID GATE"</span></div>
-        </div>
-        <div class="project-card" data-project="foxnewpunch">
-            <div class="card-header"><div class="project-icon"><img src="images/icon_foxnewpunch.png" alt="FOXNEWPUNCH" onerror="this.style.display='none'; this.parentElement.innerText='FP'"></div><div class="project-name">FOXNEWPUNCH ODYSSEY</div></div>
-            <div class="project-desc">Нарративная стратегия / цифровая археология. V17 грядет.<div class="badge-fnp">Ивенты | 153 тайтла</div></div>
-            <div class="download-area"><a class="btn-download" href="https://drive.google.com/file/d/1t6RnmKljTsgmGT3t__RCvAWnrFobou4e/view" target="_blank">СКАЧАТЬ FOXNEWPUNCH ODYSSEY</a></div>
-        </div>
-        <div class="project-card" data-project="silentrunner">
-            <div class="card-header"><div class="project-icon"><img src="images/icon_silentrunner.png" alt="SILENT RUNNER" onerror="this.style.display='none'; this.parentElement.innerText='SR'"></div><div class="project-name">SILENT RUNNER</div></div>
-            <div class="project-desc">Парсер, который не спит. Фоновый сбор данных.<div class="badge-fnp">Автоматический дамп</div></div>
-            <div class="download-area"><a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1lIwRI9ERBQ7exsZJguA0s66oL2_BUm1n/view" target="_blank">СКАЧАТЬ SILENT RUNNER</a></div>
-        </div>
-        <div class="project-card" data-project="goodboy">
-            <div class="card-header"><div class="project-icon"><img src="images/icon_goodboy.png" alt="GOODBOY TETZO" onerror="this.style.display='none'; this.parentElement.innerText='GT'"></div><div class="project-name">GOODBOY TETZO</div></div>
-            <div class="project-desc">Спасет от запретов на инет в роутере.<div class="badge-fnp">Изменит MAC | спасет</div></div>
-            <div class="download-area"><a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1GDl_sGjpb1medFdhuFpq07RPzo4Ht0LQ/view" target="_blank">СКАЧАТЬ GOODBOY TETZO (Beta)</a></div>
-        </div>
-        <div class="project-card" data-project="fnpvanilla">
-            <div class="card-header"><div class="project-icon"><img src="images/icon_vanilla.png" alt="FNP VANILLA" onerror="this.style.display='none'; this.parentElement.innerText='FV'"></div><div class="project-name">FNP VANILLA</div></div>
-            <div class="project-desc">Стабильный слой для работы с артефактами.<div class="badge-fnp">База | Лёгкий вес</div></div>
-            <div class="download-area"><a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1pltY1RvI6QBVKCmEIDMwjPuFU9Lh0mTX/view" target="_blank">СКАЧАТЬ FNP VANILLA CORE</a></div>
-        </div>
-        <div class="project-card" data-project="punchcraft">
-            <div class="card-header"><div class="project-icon"><img src="images/icon_punchcraft.png" alt="PUNCHCRAFT" onerror="this.style.display='none'; this.parentElement.innerText='⛏️'"></div><div class="project-name">PUNCHCRAFT</div></div>
-            <div class="project-desc">Атмосферный текстур-пак, аномальные блоки.<div class="badge-fnp">16x16 | VOID-текстуры</div></div>
-            <div class="download-area"><a class="btn-download" href="https://drive.google.com/file/d/1SamplePunchCraftLink/view" target="_blank">СКАЧАТЬ PUNCHCRAFT</a><span style="font-size:0.7rem; color:#59b7f9aa;">Релиз: VOID_EDITION 1.2</span></div>
-        </div>
-        <div class="project-card" data-project="foxnewpunch2">
-            <div class="card-header"><div class="project-icon"><img src="images/icon_foxnewpunch2.png" alt="FOXNEWPUNCH 2" onerror="this.style.display='none'; this.parentElement.innerText='F2'"></div><div class="project-name">FOXNEWPUNCH 2</div></div>
-            <div class="project-desc">Продолжение цифровой саги. Глубже, темнее.<div class="badge-fnp">Экспедиционный режим</div></div>
-            <div class="download-area"><div class="badge-dev">В РАЗРАБОТКЕ</div><span style="font-size:0.7rem; color:#deceefaa;">Релиз: осень 2027</span></div>
-        </div>
-    </div>
-
-    
-    <div class="screenshots-section"><div class="section-title">ГЕЙМПЛЕЙ FOXNEWPUNCH ODYSSEY — КАДРЫ ИЗ БЕЗДНЫ</div><div class="screenshot-grid"><div class="screenshot-item"><img src="images/screenshot_battle.jpg" alt="Битва" onerror="this.src='https://placehold.co/400x200/1f1c2e/deceef?text=Битва'"><div class="screenshot-caption">Битвы</div></div><div class="screenshot-item"><img src="images/screenshot_map.jpg" alt="Карта" onerror="this.src='https://placehold.co/400x200/19162a/59b7f9?text=Карта'"><div class="screenshot-caption">Альтернативная история</div></div><div class="screenshot-item"><img src="images/screenshot_temple.jpg" alt="Храм" onerror="this.src='https://placehold.co/400x200/201b33/deceef?text=Храм'"><div class="screenshot-caption">Уникальные здания</div></div><div class="screenshot-item"><img src="images/screenshot_chickens.jpg" alt="Курицы" onerror="this.src='https://placehold.co/400x200/18142b/59b7f9?text=Курицы'"><div class="screenshot-caption">Новые юниты</div></div></div></div>
-
-  
-    <div class="timers-container">
-        <div class="timer-card"><div class="timer-digits" id="fnpBirthdayTimer">-- дн -- ч -- мин -- с</div><div>День рождения FNP — 9 декабря</div></div>
-    </div>
-
-
-    <div class="news-block"><div class="news-header"><span style="font-size:1.8rem;">FNP</span><h2>НОВОСТИ FNP / АРХИВНЫЙ СВОД</h2></div><div class="news-list"><div class="news-item"><div class="news-date">03/2026 — ПРОТОКОЛ V17</div><div class="news-title">Финальное тестирование FOXNEWPUNCH ODYSSEY V17</div><div class="news-excerpt">Исправлен критический баг «потеря памяти».</div></div><div class="news-item"><div class="news-date">02/2026 — ИНФРАСТРУКТУРА</div><div class="news-title">FNPpass: система верификации запущена</div><div class="news-excerpt">Удостоверение «Свой» теперь работает через хеш-протокол.</div></div><div class="news-item"><div class="news-date">01/2026 — ЭКСПЕДИЦИЯ</div><div class="news-title">Стратегград — цифровая столица FNP</div><div class="news-excerpt">Стены укреплены, курицы несут дозор.</div></div><div class="news-item"><div class="news-date">02/2026 — ТЕКСТУРНЫЙ ПАК</div><div class="news-title">PUNCHCRAFT вышел в VOID-сборке</div><div class="news-excerpt">Первый официальный текстур-пак от FNP TECHNOLOGIES.</div></div></div></div>
-
-    <div class="footer-note">FNP TECHNOLOGIES — ЦИФРОВАЯ АРХЕОЛОГИЯ<br>ПИНГУЙ НАС СКОЛЬКО ХОЧЕШЬ. TIMEOUT — НАШ ЕДИНСТВЕННЫЙ СТАТУС. 2026</div>
-</div>
-
-
-<div class="chat-circle" id="chatCircle"><img src="images/avatar_advicex.png" alt="chat" onerror="this.style.display='none'; this.innerText='💬'"></div>
-<div class="chat-window" id="chatWindow"><div class="chat-header"><div class="chat-header-title"><img src="images/avatar_advicex.png" alt="ADVICE X" onerror="this.style.display='none'"><span>ADVICE X — поддержка</span></div><button class="chat-close" id="chatClose">×</button></div><div class="chat-messages" id="chatMessages"><div class="message"><img class="message-avatar" src="images/avatar_advicex.png" alt="AI" onerror="this.style.display='none'"><div class="message-bubble">Привет! Я ADVICE X. Чем помочь?</div></div></div><div class="chat-input-area"><input type="text" id="chatInput" placeholder="Напишите сообщение..." value="Помогите!"><button id="chatSend">→</button></div></div>
-
-
-<div class="detail-overlay" id="detailOverlay">
-    <div class="detail-panel" id="detailPanel">
-        <button class="detail-close" id="detailClose">✕</button>
-        <div id="detailContent"></div>
-    </div>
-</div>
-
-<script>
-
-    function updateFnpTimer() {
-        let now = new Date();
-        let year = now.getFullYear();
-        let bd = new Date(year, 11, 9); // 9 декабря
-        if (now > bd) bd = new Date(year + 1, 11, 9);
-        let diff = bd - now;
-        let d = Math.floor(diff / 864e5);
-        let h = Math.floor((diff % 864e5) / 36e5);
-        let m = Math.floor((diff % 36e5) / 6e4);
-        let s = Math.floor((diff % 6e4) / 1e3);
-        document.getElementById('fnpBirthdayTimer').innerText = `${d}д ${h}ч ${m}м ${s}с`;
-    }
-    setInterval(updateFnpTimer, 1000);
-    updateFnpTimer();
-
-
-    const projectsData = {
-        legionx: {
-            title: 'LEGION X — VOID GATE',
-            icon: 'images/icon_legionx.png',
-            iconFallback: 'https://placehold.co/140x140/1f232c/66c0f4?text=LX',
-            dev: 'FNP TECHNOLOGIES',
-            date: '2025-03-01',
-            size: '312 MB',
-            price: 'Бесплатно',
-            desc: 'Браузер-шлюз в Бездну. Туннелирование, анонимные маршруты, доступ к цифровым руинам. Версия 4.7 — "VOID GATE".',
-            screenshots: [
-                'images/screenshot_legionx_1.jpg',
-                'images/screenshot_legionx_2.jpg',
-                'images/screenshot_legionx_3.jpg'
-            ],
-            download: 'https://drive.google.com/file/d/1vLyFUwXODdPkqwtMlBV325ynFvyHmRQt/view'
-        },
-        foxnewpunch: {
-            title: 'FOXNEWPUNCH ODYSSEY',
-            icon: 'images/icon_foxnewpunch.png',
-            iconFallback: 'https://placehold.co/140x140/1f232c/deceef?text=FP',
-            dev: 'FNP TECHNOLOGIES',
-            date: '2024-11-15',
-            size: '1.2 GB',
-            price: 'Бесплатно',
-            desc: 'Нарративная стратегия / цифровая археология. Исследуйте Бездну, собирайте артефакты, стройте альтернативную историю. V17 грядет.',
-            screenshots: [
-                'images/screenshot_foxnewpunch_1.jpg',
-                'images/screenshot_foxnewpunch_2.jpg',
-                'images/screenshot_foxnewpunch_3.jpg'
-            ],
-            download: 'https://drive.google.com/file/d/1t6RnmKljTsgmGT3t__RCvAWnrFobou4e/view'
-        },
-        silentrunner: {
-            title: 'SILENT RUNNER',
-            icon: 'images/icon_silentrunner.png',
-            iconFallback: 'https://placehold.co/140x140/1f232c/66c0f4?text=SR',
-            dev: 'FNP TECHNOLOGIES',
-            date: '2025-02-10',
-            size: '89 MB',
-            price: 'Бесплатно',
-            desc: 'Парсер аномалий, логгер цифровых руин. Автоматический дамп данных. Работает в фоне.',
-            screenshots: [
-                'images/screenshot_silentrunner_1.jpg',
-                'images/screenshot_silentrunner_2.jpg'
-            ],
-            download: 'https://drive.google.com/file/d/1lIwRI9ERBQ7exsZJguA0s66oL2_BUm1n/view'
-        },
-        goodboy: {
-            title: 'GOODBOY TETZO',
-            icon: 'images/icon_goodboy.png',
-            iconFallback: 'https://placehold.co/140x140/1f232c/deceef?text=GT',
-            dev: 'FNP TECHNOLOGIES',
-            date: '2025-04-02',
-            size: '45 MB',
-            price: 'Бесплатно',
-            desc: 'Спасает от запретов на интернет в роутере. Изменяет MAC-адрес, обходит блокировки. Бета-версия.',
-            screenshots: [
-                'images/screenshot_goodboy_1.jpg',
-                'images/screenshot_goodboy_2.jpg'
-            ],
-            download: 'https://drive.google.com/file/d/1GDl_sGjpb1medFdhuFpq07RPzo4Ht0LQ/view'
-        },
-        fnpvanilla: {
-            title: 'FNP VANILLA CORE',
-            icon: 'images/icon_vanilla.png',
-            iconFallback: 'https://placehold.co/140x140/1f232c/66c0f4?text=FV',
-            dev: 'FNP TECHNOLOGIES',
-            date: '2025-01-20',
-            size: '210 MB',
-            price: 'Бесплатно',
-            desc: 'Стабильный слой для работы с артефактами. Базовая платформа для всех инструментов FNP.',
-            screenshots: [
-                'images/screenshot_vanilla_1.jpg',
-                'images/screenshot_vanilla_2.jpg'
-            ],
-            download: 'https://drive.google.com/file/d/1pltY1RvI6QBVKCmEIDMwjPuFU9Lh0mTX/view'
-        },
-        punchcraft: {
-            title: 'PUNCHCRAFT',
-            icon: 'images/icon_punchcraft.png',
-            iconFallback: 'https://placehold.co/140x140/1f232c/deceef?text=⛏️',
-            dev: 'FNP TECHNOLOGIES',
-            date: '2025-03-22',
-            size: '76 MB',
-            price: 'Бесплатно',
-            desc: 'Атмосферный текстур-пак для Minecraft 1.20+. Аномальные блоки, VOID-текстуры. Релиз VOID_EDITION 1.2.',
-            screenshots: [
-                'images/screenshot_punchcraft_1.jpg',
-                'images/screenshot_punchcraft_2.jpg',
-                'images/screenshot_punchcraft_3.jpg'
-            ],
-            download: 'https://drive.google.com/file/d/1SamplePunchCraftLink/view'
-        },
-        foxnewpunch2: {
-            title: 'FOXNEWPUNCH 2',
-            icon: 'images/icon_foxnewpunch2.png',
-            iconFallback: 'https://placehold.co/140x140/1f232c/66c0f4?text=F2',
-            dev: 'FNP TECHNOLOGIES',
-            date: 'Осень 2027',
-            size: 'TBA',
-            price: 'Бесплатно',
-            desc: 'Продолжение цифровой саги. Глубже, темнее. Экспедиционный режим, новые артефакты. В разработке.',
-            screenshots: [
-                'images/screenshot_foxnewpunch2_1.jpg',
-                'images/screenshot_foxnewpunch2_2.jpg'
-            ],
-            download: '#'
-        }
-    };
-
-
-    const overlay = document.getElementById('detailOverlay');
-    const panel = document.getElementById('detailPanel');
-    const content = document.getElementById('detailContent');
-    const closeBtn = document.getElementById('detailClose');
-
-    function openDetail(projectId) {
-        const p = projectsData[projectId];
-        if (!p) return;
-
-        let screenshotsHtml = p.screenshots.map(src => 
-            `<img src="${src}" onerror="this.style.display='none'" alt="screenshot">`
-        ).join('');
-
-        content.innerHTML = `
-            <div class="detail-header">
-                <img class="detail-icon" src="${p.icon}" alt="${p.title}" onerror="this.src='${p.iconFallback}'">
-                <div class="detail-title-block">
-                    <div class="detail-title">${p.title}</div>
-                    <div class="detail-dev">Разработчик: ${p.dev}</div>
-                    <div class="detail-price">${p.price}</div>
+        <!-- ПРАЙМ КС2 -->
+        <div class="prime-cs2-block">
+            <div class="prime-top">
+                <div class="prime-left">
+                    <div class="prime-icon">
+                        <img src="images/icon_cs2.png" alt="CS2" onerror="this.style.display='none'; this.parentElement.innerText='🎯'">
+                    </div>
+                    <div class="prime-info">
+                        <div class="prime-title"><span>ПРАЙМ КС2</span></div>
+                        <div class="prime-count" style="font-size:0.9rem; color:#b7b4cf;">База данных праймов</div>
+                    </div>
+                </div>
+                <div class="prime-timer">
+                    <span class="prime-timer-label">До среды</span>
+                    <span id="primeWednesdayTimer">--:--:--</span>
                 </div>
             </div>
-            <div class="detail-meta-grid">
-                <div class="detail-meta-item"><span>Дата выхода:</span> ${p.date}</div>
-                <div class="detail-meta-item"><span>Размер:</span> ${p.size}</div>
-                <div class="detail-meta-item"><span>Жанр:</span> Цифровая археология</div>
-                <div class="detail-meta-item"><span>Лицензия:</span> Бесплатно</div>
+            <div class="prime-stats">
+                <div class="prime-stat-item">
+                    <span class="icon"></span>
+                    <span><strong id="totalPrimes">9</strong> <span class="label">всего праймов</span></span>
+                </div>
+                <div class="prime-stat-item">
+                    <span class="icon"></span>
+                    <span><strong id="partnerPrimes">2</strong> <span class="label">от партнёров</span></span>
+                </div>
+                <div class="prime-stat-item">
+                    <span class="icon"></span>
+                    <span><strong id="fnpPrimes">7</strong> <span class="label">собственность FNP</span></span>
+                </div>
             </div>
-            <div class="detail-desc">${p.desc}</div>
-            <div class="detail-screenshots">${screenshotsHtml}</div>
-            ${p.download && p.download !== '#' 
-                ? `<a class="detail-download-btn" href="${p.download}" target="_blank">⬇ СКАЧАТЬ БЕСПЛАТНО</a>` 
-                : `<div style="background:#3a4049; padding:0.6rem 1.5rem; border-radius:40px; display:inline-block; color:#b0c4d9;">В РАЗРАБОТКЕ</div>`
+        </div>
+
+        <!-- ВИКИ-ПРОФИЛИ -->
+        <div class="wiki-orgs">
+            <div class="wiki-card">
+                <div class="wiki-header">
+                    <img class="wiki-flag" src="images/flag_fnp.png" alt="FNP flag" onerror="this.src='https://placehold.co/80x80/1f1c2e/59b7f9?text=FNP'">
+                    <div class="wiki-name">FNP TECHNOLOGIES</div>
+                    <div class="wiki-badge">ЦИФРОВАЯ ЭКСПЕДИЦИЯ</div>
+                </div>
+                <div class="wiki-content">
+                    <p><strong>Основание:</strong> 2019 / Протокол 0x7E<br><strong>Сфера:</strong> цифровая археология, VOID-разработки, AI-санитары.<br><strong>Ключевые проекты:</strong> LEGION X, FOXNEWPUNCH ODYSSEY, PUNCHCRAFT.<br><strong>Флаг:</strong> градиент бездны и сияние артефактов.</p>
+                    <p><em>«Мы не компания — мы экспедиция на руинах реальности»</em></p>
+                </div>
+            </div>
+            <div class="wiki-card">
+                <div class="wiki-header">
+                    <img class="wiki-flag" src="images/flag_fade.png" alt="FADE flag" onerror="this.src='https://placehold.co/80x80/3d3460/59b7f9?text=FADE'">
+                    <div class="wiki-name">АЛЬЯНС FADE</div>
+                    <div class="wiki-badge">FNP + ПАРТНЁРЫ</div>
+                </div>
+                <div class="wiki-content">
+                    <p><strong>Протокол единства:</strong> 2025 — неразрывный пакт между цифровой археологией и союзниками.<br><strong>Символ:</strong> пересекающиеся спирали артефакта и аномалии.<br>Альянс координирует выпуск кросс-продуктов и обмен протоколами.</p>
+                    <p>«FADE — грань между памятью и забвением»</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ПАРТНЁРЫ -->
+        <div class="partners-block">
+            <div class="partners-header"><span style="font-size: 1.8rem;">#</span><h2>ПАРТНЁРЫ ПРОТОКОЛА</h2></div>
+            <div class="partners-list">
+                <div class="partner-item"><a href="https://t.me/wh01sme_music" target="_blank"><img src="images/avatar_wh01sme.png" alt="wh01sme" onerror="this.style.display='none'"><span>wh01sme</span><span class="partner-badge">official</span></a></div>
+            </div>
+        </div>
+
+        <!-- КНОПКИ СОЦСЕТЕЙ -->
+        <div class="link-buttons-section">
+            <a href="https://t.me/FNP_TECHNOLOGIES" class="custom-btn" target="_blank"><img src="images/icon_telegram.png" onerror="this.style.display='none'"> РЕЛИЗЫ FNP</a>
+            <a href="https://fakecrime.bio/FNP" class="custom-btn custom-btn-outline" target="_blank"><img src="images/icon_bio.png" onerror="this.style.display='none'"> БИОГРАФИЯ</a>
+            <a href="https://foxnewpunch.fandom.com/ru/wiki/" class="custom-btn" target="_blank"><img src="images/icon_wiki.png" onerror="this.style.display='none'"> ВИКИ</a>
+            <a href="https://www.youtube.com/@FOXNEWPUNCH" class="custom-btn custom-btn-outline" target="_blank"><img src="images/icon_youtube.png" onerror="this.style.display='none'"> YOUTUBE</a>
+            <a href="https://t.me/FOXNEWPUNCH" class="custom-btn" target="_blank"><img src="images/icon_telegram_channel.png" onerror="this.style.display='none'"> ТЕЛЕГРАМ</a>
+        </div>
+
+        <!-- ПРОЕКТЫ -->
+        <div class="projects-grid" id="projectsGrid">
+            <div class="project-card" data-project="legionx">
+                <div class="card-header"><div class="project-icon"><img src="images/icon_legionx.png" alt="LEGION X" onerror="this.style.display='none'; this.parentElement.innerText='LX'"></div><div class="project-name">LEGION X</div></div>
+                <div class="project-desc">Браузер-шлюз в Бездну. Навигация по цифровым руинам.<div class="badge-fnp">Туннелирование | VOID-маршруты</div></div>
+                <div class="download-area"><a class="btn-download" href="https://drive.google.com/file/d/1vLyFUwXODdPkqwtMlBV325ynFvyHmRQt/view" target="_blank">СКАЧАТЬ LEGION X</a><span style="font-size:0.7rem; color:#59b7f9aa;">Версия 4.7 — "VOID GATE"</span></div>
+            </div>
+
+            <!-- FOXNEWPUNCH ODYSSEY — ТЕПЕРЬ В РАЗРАБОТКЕ -->
+            <div class="project-card" data-project="foxnewpunch">
+                <div class="card-header"><div class="project-icon"><img src="images/icon_foxnewpunch.png" alt="FOXNEWPUNCH" onerror="this.style.display='none'; this.parentElement.innerText='FP'"></div><div class="project-name">FOXNEWPUNCH ODYSSEY</div></div>
+                <div class="project-desc">Нарративная стратегия / цифровая археология. Новый виток экспедиции.<div class="badge-fnp">В РАЗРАБОТКЕ</div></div>
+                <div class="download-area">
+                    <div class="badge-dev">В РАЗРАБОТКЕ</div>
+                    <span style="font-size:0.7rem; color:#deceefaa;">Релиз: осень 2026</span>
+                </div>
+            </div>
+
+            <div class="project-card" data-project="silentrunner">
+                <div class="card-header"><div class="project-icon"><img src="images/icon_silentrunner.png" alt="SILENT RUNNER" onerror="this.style.display='none'; this.parentElement.innerText='SR'"></div><div class="project-name">SILENT RUNNER</div></div>
+                <div class="project-desc">Парсер, который не спит. Фоновый сбор данных.<div class="badge-fnp">Автоматический дамп</div></div>
+                <div class="download-area"><a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1lIwRI9ERBQ7exsZJguA0s66oL2_BUm1n/view" target="_blank">СКАЧАТЬ SILENT RUNNER</a></div>
+            </div>
+            <div class="project-card" data-project="goodboy">
+                <div class="card-header"><div class="project-icon"><img src="images/icon_goodboy.png" alt="GOODBOY TETZO" onerror="this.style.display='none'; this.parentElement.innerText='GT'"></div><div class="project-name">GOODBOY TETZO</div></div>
+                <div class="project-desc">Спасет от запретов на инет в роутере.<div class="badge-fnp">Изменит MAC | спасет</div></div>
+                <div class="download-area"><a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1GDl_sGjpb1medFdhuFpq07RPzo4Ht0LQ/view" target="_blank">СКАЧАТЬ GOODBOY TETZO (Beta)</a></div>
+            </div>
+            <div class="project-card" data-project="fnpvanilla">
+                <div class="card-header"><div class="project-icon"><img src="images/icon_vanilla.png" alt="FNP VANILLA" onerror="this.style.display='none'; this.parentElement.innerText='FV'"></div><div class="project-name">FNP VANILLA</div></div>
+                <div class="project-desc">Стабильный слой для работы с артефактами.<div class="badge-fnp">База | Лёгкий вес</div></div>
+                <div class="download-area"><a class="btn-download btn-download-outline" href="https://drive.google.com/file/d/1pltY1RvI6QBVKCmEIDMwjPuFU9Lh0mTX/view" target="_blank">СКАЧАТЬ FNP VANILLA CORE</a></div>
+            </div>
+            <div class="project-card" data-project="punchcraft">
+                <div class="card-header"><div class="project-icon"><img src="images/icon_punchcraft.png" alt="PUNCHCRAFT" onerror="this.style.display='none'; this.parentElement.innerText='⛏️'"></div><div class="project-name">PUNCHCRAFT</div></div>
+                <div class="project-desc">Атмосферный текстур-пак, аномальные блоки.<div class="badge-fnp">16x16 | VOID-текстуры</div></div>
+                <div class="download-area"><a class="btn-download" href="https://drive.google.com/file/d/1SamplePunchCraftLink/view" target="_blank">СКАЧАТЬ PUNCHCRAFT</a><span style="font-size:0.7rem; color:#59b7f9aa;">Релиз: VOID_EDITION 1.2</span></div>
+            </div>
+            <div class="project-card" data-project="foxnewpunch2">
+                <div class="card-header"><div class="project-icon"><img src="images/icon_foxnewpunch2.png" alt="FOXNEWPUNCH 2" onerror="this.style.display='none'; this.parentElement.innerText='F2'"></div><div class="project-name">FOXNEWPUNCH 2</div></div>
+                <div class="project-desc">Продолжение цифровой саги. Глубже, темнее.<div class="badge-fnp">Экспедиционный режим</div></div>
+                <div class="download-area"><div class="badge-dev">В РАЗРАБОТКЕ</div><span style="font-size:0.7rem; color:#deceefaa;">Релиз: осень 2027</span></div>
+            </div>
+            <div class="project-card" data-project="punchxlibrary">
+                <div class="card-header"><div class="project-icon"><img src="images/icon_punchx_library.png" alt="PUNCHX LIBRARY" onerror="this.style.display='none'; this.parentElement.innerText='📚'"></div><div class="project-name">PUNCHX LIBRARY</div></div>
+                <div class="project-desc">Цифровая библиотека артефактов. Хранилище кода, текстур и протоколов FNP.<div class="badge-fnp">Архив | Документация</div></div>
+                <div class="download-area"><div class="badge-dev">В РАЗРАБОТКЕ</div><span style="font-size:0.7rem; color:#deceefaa;">Релиз: 2027</span></div>
+            </div>
+        </div>
+
+        <!-- ТАЙМЕР -->
+        <div class="timers-container">
+            <div class="timer-card"><div class="timer-digits" id="fnpBirthdayTimer">-- дн -- ч -- мин -- с</div><div>День рождения FNP — 9 декабря</div></div>
+        </div>
+
+        <!-- НОВОСТИ -->
+        <div class="news-block"><div class="news-header"><span style="font-size:1.8rem;">FNP</span><h2>НОВОСТИ FNP / АРХИВНЫЙ СВОД</h2></div><div class="news-list"><div class="news-item"><div class="news-date">03/2026 — ПРОТОКОЛ V17</div><div class="news-title">Финальное тестирование FOXNEWPUNCH ODYSSEY V17</div><div class="news-excerpt">Исправлен критический баг «потеря памяти».</div></div><div class="news-item"><div class="news-date">02/2026 — ИНФРАСТРУКТУРА</div><div class="news-title">FNPpass: система верификации запущена</div><div class="news-excerpt">Удостоверение «Свой» теперь работает через хеш-протокол.</div></div><div class="news-item"><div class="news-date">01/2026 — ЭКСПЕДИЦИЯ</div><div class="news-title">Стратегград — цифровая столица FNP</div><div class="news-excerpt">Стены укреплены, курицы несут дозор.</div></div><div class="news-item"><div class="news-date">02/2026 — ТЕКСТУРНЫЙ ПАК</div><div class="news-title">PUNCHCRAFT вышел в VOID-сборке</div><div class="news-excerpt">Первый официальный текстур-пак от FNP TECHNOLOGIES.</div></div></div></div>
+
+        <!-- ФУТЕР -->
+        <div class="footer-note">
+            FNP TECHNOLOGIES — ЦИФРОВАЯ АРХЕОЛОГИЯ<br>
+            ПИНГУЙ НАС СКОЛЬКО ХОЧЕШЬ. TIMEOUT — НАШ ЕДИНСТВЕННЫЙ СТАТУС. 2026
+            <div class="footer-logos">
+                <a class="footer-logo-item" href="#">
+                    <img src="images/icon_silent_optimizer.png" alt="Silent Optimizer" onerror="this.style.display='none'">
+                </a>
+                <a class="footer-logo-item" href="#">
+                    <img src="images/icon_calm_core.png" alt="Calm Core" onerror="this.style.display='none'">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ЧАТ -->
+    <div class="chat-circle" id="chatCircle"><img src="images/avatar_advicex.png" alt="chat" onerror="this.style.display='none'; this.innerText='💬'"></div>
+    <div class="chat-window" id="chatWindow"><div class="chat-header"><div class="chat-header-title"><img src="images/avatar_advicex.png" alt="ADVICE X" onerror="this.style.display='none'"><span>ADVICE X — поддержка</span></div><button class="chat-close" id="chatClose">×</button></div><div class="chat-messages" id="chatMessages"><div class="message"><img class="message-avatar" src="images/avatar_advicex.png" alt="AI" onerror="this.style.display='none'"><div class="message-bubble">Привет! Я ADVICE X. Чем помочь?</div></div></div><div class="chat-input-area"><input type="text" id="chatInput" placeholder="Напишите сообщение..." value="Помогите!"><button id="chatSend">→</button></div></div>
+
+    <!-- ДЕТАЛЬНОЕ ОКНО -->
+    <div class="detail-overlay" id="detailOverlay">
+        <div class="detail-panel" id="detailPanel">
+            <button class="detail-close" id="detailClose">✕</button>
+            <div id="detailContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        // 1. ФОНОВАЯ МУЗЫКА
+        // ============================================================
+        const bgMusic = new Audio('sound/takida_fifthver.ogg');
+        bgMusic.loop = true;
+        bgMusic.volume = 0.4;
+
+        const playBtn = document.getElementById('playBtn');
+        const volumeSlider = document.getElementById('volumeSlider');
+        let isPlaying = false;
+
+        // Пытаемся автоматически запустить музыку (не во всех браузерах работает без взаимодействия)
+        // Поэтому стартуем при первом клике пользователя по любой кнопке
+        function tryAutoPlay() {
+            if (!isPlaying) {
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    playBtn.textContent = '⏸';
+                }).catch(() => {});
             }
-        `;
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeDetail() {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    closeBtn.addEventListener('click', closeDetail);
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) closeDetail();
-    });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeDetail();
-    });
-
-
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('click', function(e) {
-  
-            if (e.target.closest('.btn-download') || e.target.closest('.badge-dev')) return;
-            const projectId = this.dataset.project;
-            if (projectId) openDetail(projectId);
-        });
-    });
-
-
-    const chatCircle = document.getElementById('chatCircle');
-    const chatWindow = document.getElementById('chatWindow');
-    const chatCloseChat = document.getElementById('chatClose');
-    const chatMessages = document.getElementById('chatMessages');
-    const chatInput = document.getElementById('chatInput');
-    const chatSend = document.getElementById('chatSend');
-    let isSupportActive = false;
-    let timeoutIds = [];
-
-    function clearTimeouts() {
-        timeoutIds.forEach(id => clearTimeout(id));
-        timeoutIds = [];
-    }
-
-    function addMessage(text, isSystem = false, avatar = 'images/avatar_advicex.png', sender = 'ai') {
-        let div = document.createElement('div');
-        div.className = 'message' + (isSystem ? ' system' : '');
-        let av = sender === 'ai' ? 'images/avatar_advicex.png' : 'images/avatar_support.png';
-        div.innerHTML = `<img class="message-avatar" src="${av}" onerror="this.style.display='none'"><div class="message-bubble">${text}</div>`;
-        chatMessages.appendChild(div);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    function addTypingIndicator(cb) {
-        let td = document.createElement('div');
-        td.className = 'message';
-        td.id = 'typingIndicator';
-        td.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
-        chatMessages.appendChild(td);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        setTimeout(() => {
-            if (td.parentNode) td.remove();
-            cb();
-        }, 1200);
-    }
-
-    function startSupportFlow() {
-        if (isSupportActive) return;
-        isSupportActive = true;
-        clearTimeouts();
-        addTypingIndicator(() => {
-            addMessage("переключаю вас на оператора", false);
-            timeoutIds.push(setTimeout(() => {
-                addTypingIndicator(() => {
-                    addMessage("оператор сережка мичурин подключен", true, 'images/avatar_support.png', 'support');
-                    timeoutIds.push(setTimeout(() => {
-                        addTypingIndicator(() => {
-                            addMessage("поддержка тебя не поддержит", true, 'images/avatar_support.png', 'support');
-                            isSupportActive = false;
-                        });
-                    }, 3000));
-                });
-            }, 1500));
-        });
-    }
-
-    function handleUserMessage() {
-        let msg = chatInput.value.trim();
-        if (!msg) return;
-        let div = document.createElement('div');
-        div.className = 'message';
-        div.innerHTML = `<div class="message-bubble">${msg}</div>`;
-        chatMessages.appendChild(div);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        chatInput.value = '';
-        startSupportFlow();
-    }
-
-    chatCircle.addEventListener('click', () => chatWindow.classList.toggle('open'));
-    chatCloseChat.addEventListener('click', () => {
-        chatWindow.classList.remove('open');
-        clearTimeouts();
-        isSupportActive = false;
-    });
-    chatSend.addEventListener('click', handleUserMessage);
-    chatInput.addEventListener('keypress', e => {
-        if (e.key === 'Enter') handleUserMessage();
-    });
-    document.addEventListener('click', e => {
-        if (!chatWindow.contains(e.target) && !chatCircle.contains(e.target) && chatWindow.classList.contains('open')) {
-            chatWindow.classList.remove('open');
         }
-    });
-</script>
+
+        playBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isPlaying) {
+                bgMusic.pause();
+                isPlaying = false;
+                playBtn.textContent = '▶';
+            } else {
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    playBtn.textContent = '⏸';
+                }).catch(() => {});
+            }
+        });
+
+        volumeSlider.addEventListener('input', function() {
+            bgMusic.volume = parseFloat(this.value);
+        });
+
+        // При клике по странице пытаемся запустить музыку (если ещё не запущена)
+        document.addEventListener('click', function() {
+            if (!isPlaying) {
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    playBtn.textContent = '⏸';
+                }).catch(() => {});
+            }
+        }, { once: true });
+
+        // ============================================================
+        // 2. ЗВУКИ КЛИКОВ
+        // ============================================================
+        const soundClick = new Audio('sound/click.ogg');
+        const soundWarEnd = new Audio('sound/warEnd.ogg');
+
+        function playClick() {
+            soundClick.currentTime = 0;
+            soundClick.play().catch(() => {});
+        }
+
+        function playWarEnd() {
+            soundWarEnd.currentTime = 0;
+            soundWarEnd.play().catch(() => {});
+        }
+
+        // ============================================================
+        // 3. ТАЙМЕРЫ
+        // ============================================================
+        function updateFnpTimer() {
+            let now = new Date();
+            let year = now.getFullYear();
+            let bd = new Date(year, 11, 9);
+            if (now > bd) bd = new Date(year + 1, 11, 9);
+            let diff = bd - now;
+            let d = Math.floor(diff / 864e5);
+            let h = Math.floor((diff % 864e5) / 36e5);
+            let m = Math.floor((diff % 36e5) / 6e4);
+            let s = Math.floor((diff % 6e4) / 1e3);
+            document.getElementById('fnpBirthdayTimer').innerText = `${d}д ${h}ч ${m}м ${s}с`;
+        }
+        setInterval(updateFnpTimer, 1000);
+        updateFnpTimer();
+
+        function updateWednesdayTimer() {
+            const now = new Date();
+            let day = now.getDay();
+            let daysUntilWednesday = (3 - day + 7) % 7;
+            if (daysUntilWednesday === 0 && now.getHours() >= 0) daysUntilWednesday = 7;
+            const target = new Date(now);
+            target.setDate(now.getDate() + daysUntilWednesday);
+            target.setHours(0, 0, 0, 0);
+            let diff = target - now;
+            if (diff < 0) {
+                target.setDate(target.getDate() + 7);
+                diff = target - now;
+            }
+            const hours = Math.floor(diff / 36e5);
+            const minutes = Math.floor((diff % 36e5) / 6e4);
+            const seconds = Math.floor((diff % 6e4) / 1e3);
+            document.getElementById('primeWednesdayTimer').innerText =
+                String(hours).padStart(2, '0') + ':' +
+                String(minutes).padStart(2, '0') + ':' +
+                String(seconds).padStart(2, '0');
+        }
+        setInterval(updateWednesdayTimer, 1000);
+        updateWednesdayTimer();
+
+        // ============================================================
+        // 4. ДАННЫЕ ПРОЕКТОВ
+        // ============================================================
+        const projectsData = {
+            legionx: {
+                title: 'LEGION X — VOID GATE',
+                icon: 'images/icon_legionx.png',
+                iconFallback: 'https://placehold.co/140x140/1f232c/66c0f4?text=LX',
+                dev: 'FNP TECHNOLOGIES',
+                date: '2025-03-01',
+                size: '100 MB',
+                price: 'Бесплатно',
+                desc: 'Браузер-шлюз в Бездну. Туннелирование, анонимные маршруты, доступ к цифровым руинам. Версия 4.7 — "VOID GATE".',
+                screenshots: ['images/screenshot_legionx_1.jpg', 'images/screenshot_legionx_2.jpg',
+                    'images/screenshot_legionx_3.jpg'
+                ],
+                download: 'https://drive.google.com/file/d/1vLyFUwXODdPkqwtMlBV325ynFvyHmRQt/view'
+            },
+            foxnewpunch: {
+                title: 'FOXNEWPUNCH ODYSSEY',
+                icon: 'images/icon_foxnewpunch.png',
+                iconFallback: 'https://placehold.co/140x140/1f232c/deceef?text=FP',
+                dev: 'FNP TECHNOLOGIES',
+                date: 'Осень 2026',
+                size: 'TBA',
+                price: 'Бесплатно',
+                desc: 'Нарративная стратегия / цифровая археология. Новый виток экспедиции в Бездну. Переработанная механика, новые артефакты и сюжетные линии.',
+                screenshots: ['images/screenshot_foxnewpunch_1.jpg', 'images/screenshot_foxnewpunch_2.jpg',
+                    'images/screenshot_foxnewpunch_3.jpg'
+                ],
+                download: '#',
+                inDevelopment: true
+            },
+            silentrunner: {
+                title: 'SILENT RUNNER',
+                icon: 'images/icon_silentrunner.png',
+                iconFallback: 'https://placehold.co/140x140/1f232c/66c0f4?text=SR',
+                dev: 'FNP TECHNOLOGIES',
+                date: '2025-02-10',
+                size: '89 MB',
+                price: 'Бесплатно',
+                desc: 'Парсер аномалий, логгер цифровых руин. Автоматический дамп данных. Работает в фоне.',
+                screenshots: ['images/screenshot_silentrunner_1.jpg', 'images/screenshot_silentrunner_2.jpg'],
+                download: 'https://drive.google.com/file/d/1lIwRI9ERBQ7exsZJguA0s66oL2_BUm1n/view'
+            },
+            goodboy: {
+                title: 'GOODBOY TETZO',
+                icon: 'images/icon_goodboy.png',
+                iconFallback: 'https://placehold.co/140x140/1f232c/deceef?text=GT',
+                dev: 'FNP TECHNOLOGIES',
+                date: '2025-04-02',
+                size: '45 MB',
+                price: 'Бесплатно',
+                desc: 'Спасает от запретов на интернет в роутере. Изменяет MAC-адрес, обходит блокировки. Бета-версия.',
+                screenshots: ['images/screenshot_goodboy_1.jpg', 'images/screenshot_goodboy_2.jpg'],
+                download: 'https://drive.google.com/file/d/1GDl_sGjpb1medFdhuFpq07RPzo4Ht0LQ/view'
+            },
+            fnpvanilla: {
+                title: 'FNP VANILLA CORE',
+                icon: 'images/icon_vanilla.png',
+                iconFallback: 'https://placehold.co/140x140/1f232c/66c0f4?text=FV',
+                dev: 'FNP TECHNOLOGIES',
+                date: '2025-01-20',
+                size: '1.2 GB',
+                price: 'Бесплатно',
+                desc: 'Стабильный слой для работы с артефактами. Базовая платформа для всех инструментов FNP.',
+                screenshots: ['images/screenshot_vanilla_1.jpg', 'images/screenshot_vanilla_2.jpg'],
+                download: 'https://drive.google.com/file/d/1pltY1RvI6QBVKCmEIDMwjPuFU9Lh0mTX/view'
+            },
+            punchcraft: {
+                title: 'PUNCHCRAFT',
+                icon: 'images/icon_punchcraft.png',
+                iconFallback: 'https://placehold.co/140x140/1f232c/deceef?text=⛏️',
+                dev: 'FNP TECHNOLOGIES',
+                date: '2025-03-22',
+                size: '76 MB',
+                price: 'Бесплатно',
+                desc: 'Атмосферный текстур-пак для Minecraft 1.20+. Аномальные блоки, VOID-текстуры. Релиз VOID_EDITION 1.2.',
+                screenshots: ['images/screenshot_punchcraft_1.jpg', 'images/screenshot_punchcraft_2.jpg',
+                    'images/screenshot_punchcraft_3.jpg'
+                ],
+                download: 'https://drive.google.com/file/d/1SamplePunchCraftLink/view'
+            },
+            foxnewpunch2: {
+                title: 'FOXNEWPUNCH 2',
+                icon: 'images/icon_foxnewpunch2.png',
+                iconFallback: 'https://placehold.co/140x140/1f232c/66c0f4?text=F2',
+                dev: 'FNP TECHNOLOGIES',
+                date: 'Осень 2027',
+                size: 'TBA',
+                price: 'Бесплатно',
+                desc: 'Продолжение цифровой саги. Глубже, темнее. Экспедиционный режим, новые артефакты. В разработке.',
+                screenshots: ['images/screenshot_foxnewpunch2_1.jpg', 'images/screenshot_foxnewpunch2_2.jpg'],
+                download: '#',
+                inDevelopment: true
+            },
+            punchxlibrary: {
+                title: 'PUNCHX LIBRARY',
+                icon: 'images/icon_punchx_library.png',
+                iconFallback: 'https://placehold.co/140x140/1f232c/deceef?text=📚',
+                dev: 'FNP TECHNOLOGIES',
+                date: '2027',
+                size: 'TBA',
+                price: 'Бесплатно',
+                desc: 'Цифровая библиотека артефактов. Хранилище кода, текстур и протоколов FNP. Систематизация всего накопленного опыта цифровой археологии.',
+                screenshots: ['images/screenshot_punchxlib_1.jpg', 'images/screenshot_punchxlib_2.jpg'],
+                download: '#',
+                inDevelopment: true
+            }
+        };
+
+        // ============================================================
+        // 5. ДЕТАЛЬНОЕ ОКНО
+        // ============================================================
+        const overlay = document.getElementById('detailOverlay');
+        const content = document.getElementById('detailContent');
+        const closeBtn = document.getElementById('detailClose');
+
+        function openDetail(projectId) {
+            const p = projectsData[projectId];
+            if (!p) return;
+
+            playWarEnd();
+
+            let screenshotsHtml = p.screenshots.map(src =>
+                `<img src="${src}" onerror="this.style.display='none'" alt="screenshot">`
+            ).join('');
+
+            const isDev = p.inDevelopment || false;
+
+            content.innerHTML = `
+                    <div class="detail-header">
+                        <img class="detail-icon" src="${p.icon}" alt="${p.title}" onerror="this.src='${p.iconFallback}'">
+                        <div class="detail-title-block">
+                            <div class="detail-title">${p.title}</div>
+                            <div class="detail-dev">Разработчик: ${p.dev}</div>
+                            <div class="detail-price">${p.price}</div>
+                        </div>
+                    </div>
+                    <div class="detail-meta-grid">
+                        <div class="detail-meta-item"><span>Дата выхода:</span> ${p.date}</div>
+                        <div class="detail-meta-item"><span>Размер:</span> ${p.size}</div>
+                        <div class="detail-meta-item"><span>Жанр:</span> Цифровая археология</div>
+                        <div class="detail-meta-item"><span>Лицензия:</span> Бесплатно</div>
+                    </div>
+                    <div class="detail-desc">${p.desc}</div>
+                    <div class="detail-screenshots">${screenshotsHtml}</div>
+                    ${isDev 
+                        ? `<div style="background:#3a4049; padding:0.6rem 1.5rem; border-radius:40px; display:inline-block; color:#b0c4d9;">В РАЗРАБОТКЕ</div>` 
+                        : `<a class="detail-download-btn" href="${p.download}" target="_blank">⬇ СКАЧАТЬ БЕСПЛАТНО</a>`
+                    }
+                `;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDetail() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeDetail);
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeDetail();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDetail();
+        });
+
+        // ============================================================
+        // 6. КЛИКИ
+        // ============================================================
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.closest('.btn-download') || e.target.closest('.badge-dev')) {
+                    playClick();
+                    return;
+                }
+                playClick();
+                const projectId = this.dataset.project;
+                if (projectId) openDetail(projectId);
+            });
+        });
+
+        document.querySelectorAll('.btn-download').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                playClick();
+            });
+        });
+
+        document.querySelectorAll('.custom-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                playClick();
+            });
+        });
+
+        document.querySelectorAll('.header-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                playClick();
+            });
+        });
+
+        closeBtn.addEventListener('click', function() {
+            playClick();
+            closeDetail();
+        });
+
+        // ============================================================
+        // 7. ЧАТ
+        // ============================================================
+        const chatCircle = document.getElementById('chatCircle');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatCloseChat = document.getElementById('chatClose');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const chatSend = document.getElementById('chatSend');
+        let isSupportActive = false;
+        let timeoutIds = [];
+
+        function clearTimeouts() {
+            timeoutIds.forEach(id => clearTimeout(id));
+            timeoutIds = [];
+        }
+
+        function addMessage(text, isSystem = false, avatar = 'images/avatar_advicex.png', sender = 'ai') {
+            let div = document.createElement('div');
+            div.className = 'message' + (isSystem ? ' system' : '');
+            let av = sender === 'ai' ? 'images/avatar_advicex.png' : 'images/avatar_support.png';
+            div.innerHTML = `<img class="message-avatar" src="${av}" onerror="this.style.display='none'"><div class="message-bubble">${text}</div>`;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function addTypingIndicator(cb) {
+            let td = document.createElement('div');
+            td.className = 'message';
+            td.id = 'typingIndicator';
+            td.innerHTML = `<div class="typing-indicator"><span></span><span></span><span></span></div>`;
+            chatMessages.appendChild(td);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            setTimeout(() => {
+                if (td.parentNode) td.remove();
+                cb();
+            }, 1200);
+        }
+
+        function startSupportFlow() {
+            if (isSupportActive) return;
+            isSupportActive = true;
+            clearTimeouts();
+            addTypingIndicator(() => {
+                addMessage("переключаю вас на оператора", false);
+                timeoutIds.push(setTimeout(() => {
+                    addTypingIndicator(() => {
+                        addMessage("оператор сережка мичурин подключен", true, 'images/avatar_support.png',
+                            'support');
+                        timeoutIds.push(setTimeout(() => {
+                            addTypingIndicator(() => {
+                                addMessage("поддержка тебя не поддержит", true,
+                                    'images/avatar_support.png', 'support');
+                                isSupportActive = false;
+                            });
+                        }, 3000));
+                    });
+                }, 1500));
+            });
+        }
+
+        function handleUserMessage() {
+            let msg = chatInput.value.trim();
+            if (!msg) return;
+            let div = document.createElement('div');
+            div.className = 'message';
+            div.innerHTML = `<div class="message-bubble">${msg}</div>`;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            chatInput.value = '';
+            playClick();
+            startSupportFlow();
+        }
+
+        chatCircle.addEventListener('click', () => {
+            playClick();
+            chatWindow.classList.toggle('open');
+        });
+        chatCloseChat.addEventListener('click', () => {
+            playClick();
+            chatWindow.classList.remove('open');
+            clearTimeouts();
+            isSupportActive = false;
+        });
+        chatSend.addEventListener('click', handleUserMessage);
+        chatInput.addEventListener('keypress', e => {
+            if (e.key === 'Enter') handleUserMessage();
+        });
+        document.addEventListener('click', e => {
+            if (!chatWindow.contains(e.target) && !chatCircle.contains(e.target) && chatWindow.classList.contains(
+                    'open')) {
+                chatWindow.classList.remove('open');
+            }
+        });
+    </script>
 </body>
 </html>
